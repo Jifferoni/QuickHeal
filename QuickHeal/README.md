@@ -1,3 +1,5 @@
+<img width="1584" height="672" alt="image" src="https://github.com/user-attachments/assets/40e48d1d-3b54-4344-ad80-7e3d4c51aae1" />
+
 # QuickHeal
 QuickHeal for Vanilla WoW 1.12. with integration for HealComm (Luna unit Frames).
 
@@ -28,14 +30,8 @@ I got the original version of QuickHeal from https://wow.curseforge.com/projects
 
 - Heal:
 To do a heal make a macro with "/qh" or set Keybind:
-
-![Keybind Quick Heal](https://www2.pic-upload.de/img/35189646/1.png)
-
 - Downrank
 To conserve mana and heal more effitiently you can limit the max rank that Quick Heal will use. It is done by moving the slider. on the Downrank Window. "/qh dr" to open the Downrank Window.
-![Open Downrank Window](https://www2.pic-upload.de/img/35189791/2.png)
-![Downrank Window](https://www2.pic-upload.de/img/35189979/3.png)
-
 - Change Heal mode
 There are 3 modes for healing.
 
@@ -52,7 +48,7 @@ Will cast the heal with the most HPS.
 Priest: Will cast Prayer of Healing if possible
 
 The Heal mode can tbe set with macro or Key bind. The ">" indicate the selected mode.
-![Keybinds Healmode](https://www2.pic-upload.de/img/35190067/4.png)
+
 
 # Changes:
 
