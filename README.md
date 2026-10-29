@@ -1,12 +1,12 @@
 <img width="1584" height="672" alt="image" src="https://github.com/user-attachments/assets/40e48d1d-3b54-4344-ad80-7e3d4c51aae1" />
 
 # QuickHeal
-QuickHeal for Vanilla WoW 1.12. with integration for HealComm (Luna unit Frames).
+QuickHeal for Vanilla WoW 1.12. with integration for HealComm.
 
 I'm not the author of QuickHeal.
 
 I just did the implementation for QuckHeal to use Healcom to heal smarter.
-I also did some other additions and improvements.
+I also did some other additions and improvements based on some forks and make it work with Octowow - namely added QuickHeal HoTs to apply the right rank hot to get people back to full and account for incombat ranking adjustments.
 
 I got the original version of QuickHeal from https://wow.curseforge.com/projects/project-2800.
 
