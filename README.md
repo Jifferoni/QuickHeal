@@ -1,9 +1,8 @@
-QuickHeal
+![QuickHeal preview](QuickHeal/QH.jpg)
 QuickHeal is a WoW Vanilla 1.12 healer helper addon designed to make raid and party healing faster and more efficient. It helps choose the appropriate healing spell for the current target, reduces overhealing, and supports class-specific healing logic for common classic healing roles.
 This repository contains the addon source under the `QuickHeal/` directory and is intended for use with the classic addon ecosystem.
-![QuickHeal preview](QuickHeal/QH.jpg)
 
-Overview
+#Overview
 QuickHeal is focused on helping healers make smarter decisions in high-pressure raid situations. It is designed for party and raid healing and includes logic to:
 prioritize the most injured targets
 reduce overhealing using incoming heal data
@@ -11,11 +10,12 @@ choose spell ranks more efficiently
 adapt behavior based on class and healing mode
 support macros and keybind-driven healing
 The project includes addon logic for the following classes:
-Priest
-Paladin
-Druid
-Shaman
-Features
+- Priest
+- Paladin
+- Druid
+- Shaman
+
+#Features
 HealComm/Luna Unit Frames integration to account for incoming heals
 Smart target prioritization based on missing health
 Class-specific healing behavior
@@ -28,7 +28,8 @@ QuickHeal is designed for World of Warcraft Vanilla 1.12 and works best alongsid
 HealComm or Luna Unit Frames
 BonusScanner (recommended for more accurate healing calculations)
 A WoW 1.12-era client or compatible addon environment
-Installation
+
+#Installation
 Download or clone this repository.
 Copy the `QuickHeal/` folder into your World of Warcraft `Interface/AddOns` directory.
 Ensure the addon folder is named exactly `QuickHeal` (remove any suffixes such as `-master`).
@@ -49,7 +50,7 @@ World of Warcraft/
         QuickHealShaman.lua
         ...
 ```
-Usage
+#Usage
 QuickHeal is controlled mainly through slash commands and macros.
 Common commands:
 `/qh` — trigger the main healing action
@@ -59,7 +60,8 @@ Common commands:
 `/qh hm 2` — set healing mode 2
 `/qh hm 3` — set healing mode 3
 You can also bind the addon to keys or create macros for faster in-game use.
-Healing Modes
+
+#Healing Modes
 QuickHeal includes multiple healing modes to adapt how it chooses spells:
 Mode 1: default/conservative behavior
 Mode 2: more focused spell selection
@@ -68,7 +70,8 @@ Behavior differs by class:
 Priest: may use different spell ranks or cast group heals depending on mode
 Paladin: may prefer spells such as Flash of Light or Holy Light
 Druid and Shaman: include class-specific restorative logic
-Repository Layout
+
+#Repository Layout
 ```text
 .
 ├── QuickHeal/
