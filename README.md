@@ -1,112 +1,75 @@
-![QuickHeal preview](QuickHeal/QH.jpg)
-QuickHeal is a WoW Vanilla 1.12 healer helper addon designed to make raid and party healing faster and more efficient. It helps choose the appropriate healing spell for the current target, reduces overhealing, and supports class-specific healing logic for common classic healing roles.
-This repository contains the addon source under the `QuickHeal/` directory and is intended for use with the classic addon ecosystem.
+<img width="1584" height="672" alt="image" src="https://github.com/user-attachments/assets/40e48d1d-3b54-4344-ad80-7e3d4c51aae1" />
 
-#Overview
-QuickHeal is focused on helping healers make smarter decisions in high-pressure raid situations. It is designed for party and raid healing and includes logic to:
-prioritize the most injured targets
-reduce overhealing using incoming heal data
-choose spell ranks more efficiently
-adapt behavior based on class and healing mode
-support macros and keybind-driven healing
-The project includes addon logic for the following classes:
-- Priest
-- Paladin
-- Druid
-- Shaman
+# QuickHeal
+QuickHeal for Vanilla WoW 1.12. with integration for HealComm (Luna unit Frames).
 
-#Features
-HealComm/Luna Unit Frames integration to account for incoming heals
-Smart target prioritization based on missing health
-Class-specific healing behavior
-Downranking support to conserve mana
-Multiple healing modes for different playstyles
-Localization support for multiple languages
-Integration with the classic WoW UI and addon environment
-Requirements
-QuickHeal is designed for World of Warcraft Vanilla 1.12 and works best alongside:
-HealComm or Luna Unit Frames
-BonusScanner (recommended for more accurate healing calculations)
-A WoW 1.12-era client or compatible addon environment
+I'm not the author of QuickHeal.
 
-#Installation
-Download or clone this repository.
-Copy the `QuickHeal/` folder into your World of Warcraft `Interface/AddOns` directory.
-Ensure the addon folder is named exactly `QuickHeal` (remove any suffixes such as `-master`).
-Install any required dependencies such as HealComm or Luna Unit Frames.
-Reload the UI and enable the addon in-game.
-Example layout:
-```text
-World of Warcraft/
-  Interface/
-    AddOns/
-      QuickHeal/
-        QuickHeal.toc
-        QuickHeal.lua
-        QuickHeal.xml
-        QuickHealPriest.lua
-        QuickHealPaladin.lua
-        QuickHealDruid.lua
-        QuickHealShaman.lua
-        ...
-```
-#Usage
-QuickHeal is controlled mainly through slash commands and macros.
-Common commands:
-`/qh` — trigger the main healing action
-`/qh help` — display help text
-`/qh dr` or `/qh downrank` — open the downrank window
-`/qh hm 1` — set healing mode 1
-`/qh hm 2` — set healing mode 2
-`/qh hm 3` — set healing mode 3
-You can also bind the addon to keys or create macros for faster in-game use.
+I just did the implementation for QuckHeal to use Healcom to heal smarter.
+I also did some other additions and improvements.
 
-#Healing Modes
-QuickHeal includes multiple healing modes to adapt how it chooses spells:
-Mode 1: default/conservative behavior
-Mode 2: more focused spell selection
-Mode 3: highest HPS / more aggressive spell choice
-Behavior differs by class:
-Priest: may use different spell ranks or cast group heals depending on mode
-Paladin: may prefer spells such as Flash of Light or Holy Light
-Druid and Shaman: include class-specific restorative logic
+I got the original version of QuickHeal from https://wow.curseforge.com/projects/project-2800.
 
-#Repository Layout
-```text
-.
-├── QuickHeal/
-│   ├── README.md
-│   ├── QuickHeal.lua
-│   ├── QuickHeal.xml
-│   ├── QuickHealPriest.lua
-│   ├── QuickHealPaladin.lua
-│   ├── QuickHealDruid.lua
-│   ├── QuickHealShaman.lua
-│   ├── QuickClick.lua
-│   ├── Bindings.xml
-│   ├── HealingBar.xml
-│   ├── localization.en.lua
-│   ├── localization.de.lua
-│   ├── localization.fr.lua
-│   ├── QH.jpg
-│   └── libs/
-│       ├── AceAddon-2.0/
-│       ├── AceConsole-2.0/
-│       ├── AceEvent-2.0/
-│       ├── HealComm-1.0/
-│       └── RosterLib-2.0/
-├── LICENSE
-└── README.md
-```
-Note: this repository does not currently appear to include a dedicated license file at the root. If a license is required for redistribution or reuse, it should be added explicitly.
-Credits
-This project is based on the original QuickHeal concept and was adapted for smarter HealComm-aware healing behavior. The addon also incorporates supporting libraries such as:
-AceAddon
-AceConsole
-AceEvent
-HealComm
-RosterLib
-Notes
-QuickHeal is a classic-era addon intended specifically for the WoW 1.12 addon ecosystem. It is best suited for players using a Vanilla-era healing setup and companion addons such as HealComm or Luna Unit Frames.
-Contributing
-This repository appears to be a personal or community addon project. Improvements, fixes, and compatibility updates are welcome through pull requests or direct code changes.
+# Installation
+- Download QuickHeal from this repository into your Interface folder and remove the "-master" in the folder name
+- Download HealComm or Luna unit Frames: https://github.com/Aviana/LunaUnitFrames
+- Download Bonusscanner (Makes QhickHeal and HealComm (Luna unit Frames) more accurate by taking gear and +Heal into account: http://www.vanilla-addons.com/dls/bonusscanner/
+
+# What this version of QuickHeal does:
+
+**Integration of HealComm**
+
+- QuickHeal is now using the incomming heal information, broadcasted by HealComm (Luna unit Frames), through the addonchannel to reduce overhealing and making this addon used by multible raidmembers more effective.
+- Also there is the option to downrank the spells being used, so healing can be more effitient.
+
+**How to use**
+- Find the original description here: https://wow.curseforge.com/projects/project-2800
+
+- Help
+"/qh help" displays all a
+
+- Heal:
+To do a heal make a macro with "/qh" or set Keybind:
+- Downrank
+To conserve mana and heal more effitiently you can limit the max rank that Quick Heal will use. It is done by moving the slider. on the Downrank Window. "/qh dr" to open the Downrank Window.
+- Change Heal mode
+There are 3 modes for healing.
+
+"/qh hm 1" - Default
+Priest: Will only cast Greater Heal, Heal and Lesser Heal.
+Paladin: Will only use Flash of Light
+
+"/qh hm 2" 
+Priest: Will only cast Flash Heal
+Paladin: Will only cast Holy Light
+ 
+"/qh hm 3" - Most HPS
+Will cast the heal with the most HPS.
+Priest: Will cast Prayer of Healing if possible
+
+The Heal mode can tbe set with macro or Key bind. The ">" indicate the selected mode.
+
+
+# Changes:
+
+hc05: (get from Branch)
+- Healmodes for Paladins and Priests now controll the spells used. See How to Use
+- Priests: in healmode 3 Prayer of Heal is cast if possible
+- Finalization of the addon, for the possibility of localization [@shikulja](https://github.com/shikulja). Special thanks, for the help and instructions Lichery.
+- Fixed overhealing sound playing
+- Added colored target names (enabled by default)
+
+hc04:
+- new command: /qh healpct - Will prioritise the player with the lowest percentage of health. (override changes of hc03, where priests heal the target with the most healing needed and paladins the lowest target)
+
+
+hc03:
+- /qh downrank or /qh dr toggles a window where the maximum spell rank to be used for healspells can be set. (hold rightclick on frame to drag the window)
+- Keybind for toggeling downrank window
+- /qh toggle will change between Flash heals and Normal heals on Priest
+- Keybind to toggle between Flash heals and Normal heals on Priest
+- Heal sent from other players via HealComm will now be considered in selv preservation
+- Heal sent from other players via HealComm will now be considered for player that is target of target prioity healing
+- Priests will now heal the player with the most health missing
+- Paladin will now heal the player with the lowest amount of health
+- For Paladins healing out of fight will now use the same spells as infight
